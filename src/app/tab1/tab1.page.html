@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Estudiantes
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,30 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Estudiantes</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-list *ngFor="let student of students">
+  <ion-item (click)="view(student)">
+    <ion-label>{{student.nc}}</ion-label>
+    <ion-label>{{student.name}}</ion-label>
+  </ion-item>
+</ion-list> 
+
+<!--<ion-card>
+   <ion-card-header>
+    <ion-card-subtitle>Desarrollo de Aplicaciones Híbridas</ion-card-subtitle>
+    <ion-card-title>Asignatura</ion-card-title>
+   </ion-card-header>
+   <ion-card-content>
+     <div *ngFor="let student of students">
+     <ion-item *ngIf="student.grade>=70">
+       <ion-label>{{student.name}}</ion-label>
+       <ion-label>{{student.grade}}</ion-label>
+       </ion-item>
+    </div> 
+   </ion-card-content>
+ </ion-card>-->
+ 
 </ion-content>

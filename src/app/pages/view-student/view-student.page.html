@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Informacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{student.nc}}</ion-card-subtitle>
+      <ion-card-title>{{student.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h3>Calificacion: {{student.grade}}</h3>
+      <ion-chip color="danger" *ngIf="!student.active">
+        <ion-label>Inactivo</ion-label>
+      </ion-chip>
+      <ion-chip color="secondary" *ngIf="student.active">
+        <ion-label>Activo</ion-label>
+      </ion-chip>
+    </ion-card-content>
+ 
+  </ion-card>
+</ion-content>
